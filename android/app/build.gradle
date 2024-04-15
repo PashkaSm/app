@@ -66,7 +66,7 @@ android {
                 keyAlias System.getenv()["CM_KEY_ALIAS"]
                 keyPassword System.getenv()["CM_KEY_PASSWORD"]
             } else {
-                storeFile file("/path/to/local/myreleasekey.keystore")
+                storeFile file("/path/to/local/lethalCompaniWallpaper.keystore")
                 storePassword System.getenv()["KEYSTORE_PASSWORD"]
                 keyAlias System.getenv()["KEY_ALIAS_USERNAME"]
                 keyPassword System.getenv()["KEY_ALIAS_PASSWORD"]
