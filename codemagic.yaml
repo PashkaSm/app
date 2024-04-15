@@ -5,7 +5,7 @@ workflows:
     max_build_duration: 120
     environment:
       android_signing:
-        - firstapp
+        - keystore_reference
       flutter: stable
     scripts:
       - name: Set up local.properties
@@ -14,18 +14,11 @@ workflows:
       - name: Get Flutter packages
         script: |
           flutter packages pub get
-      - name: Build AAB with Flutter
+      - name: Build APK with Flutter
         script: |
-          flutter build apk --release
+          flutter build apk --relese
     artifacts:
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
-    publishing:
-      email:
-        recipients:
-          - smolynest_pavlo@ukr.net
-        notify:
-          success: true
-          failure: false
-    
+   
