@@ -6,6 +6,10 @@ workflows:
     environment:
       flutter: stable
     scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter packages pub get
       - name: Build APK with Flutter
         script: |
           flutter build apk --release
+     
